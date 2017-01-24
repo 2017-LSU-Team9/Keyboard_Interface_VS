@@ -10,7 +10,7 @@
         <Image x:Name="lsuMElogo" HorizontalAlignment="Left" Height="91" Margin="10,0,0,0" VerticalAlignment="Top" Width="288" Source="logos/LSUme.png"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="385,411,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="71" Width="197" FontSize="16" TextAlignment="Center"><LineBreak/><Run Text="Team #9"/><LineBreak/><Run Text="LSU Capstone Design"/></TextBlock>
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Center" Margin="10,194,12,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="109" Width="570" FontFamily="Berlin Sans FB" FontSize="48" TextAlignment="Center"><Run Text="Julian's Keyboard "/><LineBreak/><Run Text="Interface"/></TextBlock>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="0,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="94" Width="143" FontSize="18" TextAlignment="Center"><Run Text="Daniel Dickson"/><LineBreak/><Run Text="Austin Lala"/><LineBreak/><Run Text="Tyler Parker"/></TextBlock>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="2,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="94" Width="143" FontSize="18" TextAlignment="Center"><Run Text="Daniel Dickson"/><LineBreak/><Run Text="Austin Lala"/><LineBreak/><Run Text="Tyler Parker"/></TextBlock>
         <Image x:Name="image" HorizontalAlignment="Left" Height="113" Margin="459,0,0,0" VerticalAlignment="Top" Width="133" Source="logos/LSUee.png"/>
     </Grid>
 </Window>
