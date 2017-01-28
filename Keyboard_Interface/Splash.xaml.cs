@@ -33,10 +33,26 @@ namespace Keyboard_Interface
 
         private void splashTime_tick(object sender, EventArgs e)
         {
-            MainWindow m = new MainWindow();
-            m.Show();
-            splashTime.Stop();
-            this.Close();
+            if (Properties.Settings.Default.firstRun)
+            {
+                /* UNCOMMENT UPON COMPLETION OF SETTINGS
+                Settings set = new Settings();
+                set.Show();
+                */
+                splashTime.Stop();
+                this.Close();
+            }
+            else
+            {
+                /* UNCOMMENT UPON COMPLETION OF SETTINGS
+                MainWindow win = new Keyboard_Interface.MainWindow();
+                win.Show();
+                */
+                Settings set = new Settings();
+                set.Show();
+                splashTime.Stop();
+                this.Close();
+            }
         }
     }
 }
