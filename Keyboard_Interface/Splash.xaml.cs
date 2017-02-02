@@ -41,6 +41,7 @@ namespace Keyboard_Interface
                 */
                 splashTime.Stop();
                 this.Hide();
+                //Properties.Settings.Default.firstRun = false;
             }
             else
             {
