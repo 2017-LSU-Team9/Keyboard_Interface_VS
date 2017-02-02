@@ -8,6 +8,7 @@
         Title="MainWindow" Height= "1680" Width="1500" WindowState="Maximized" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
         <TextBlock x:Name="firstRunTest" HorizontalAlignment="Left" FontSize="72px" Margin="384,291,0,0" TextWrapping="Wrap" Text="Test" VerticalAlignment="Top" Height="523" Width="856"/>
+        <Button x:Name="close" Content="CLOSE" HorizontalAlignment="Left" Margin="1152,105,0,0" VerticalAlignment="Top" Width="228" Height="95" Click="close_Click" FontSize="45px"/>
 
     </Grid>
 </Window>

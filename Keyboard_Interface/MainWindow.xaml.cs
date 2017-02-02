@@ -24,6 +24,10 @@ namespace Keyboard_Interface
         {
             InitializeComponent();
         }
-            
+
+        private void close_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

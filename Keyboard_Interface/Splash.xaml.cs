@@ -40,7 +40,7 @@ namespace Keyboard_Interface
                 set.Show();
                 */
                 splashTime.Stop();
-                this.Close();
+                this.Hide();
             }
             else
             {
@@ -51,7 +51,7 @@ namespace Keyboard_Interface
                 Settings set = new Settings();
                 set.Show();
                 splashTime.Stop();
-                this.Close();
+                this.Hide();
             }
         }
     }
