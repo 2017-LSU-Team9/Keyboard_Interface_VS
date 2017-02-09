@@ -18,16 +18,29 @@ namespace Keyboard_Interface
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+
+
+    public partial class Layout1_L : Window
     {
-        public MainWindow()
+        public Layout1_L()
         {
             InitializeComponent();
+            this.Background = new SolidColorBrush(Color.FromRgb(Properties.Settings.Default.themeRGB, Properties.Settings.Default.themeRGB, Properties.Settings.Default.themeRGB));
         }
-
+        
         private void close_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            Application.Current.Shutdown(); 
+        }
+
+        private void a_Click(object sender, RoutedEventArgs e)
+        {
+           input.AppendText("A");
+        }
+
+        private void bksp_Click(object sender, RoutedEventArgs e)
+        {
+            input.Text = input.Text.Remove(input.Text.Length - 1, 1);
         }
     }
 }

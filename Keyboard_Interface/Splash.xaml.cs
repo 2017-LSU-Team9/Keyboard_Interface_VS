@@ -27,7 +27,7 @@ namespace Keyboard_Interface
             InitializeComponent();
 
             splashTime.Tick += new EventHandler(splashTime_tick);
-            splashTime.Interval = new TimeSpan(0, 0, 6);
+            splashTime.Interval = new TimeSpan(0, 0, 2);        // CHANGE BACK to 6
             splashTime.Start();
         }
 
@@ -36,18 +36,18 @@ namespace Keyboard_Interface
             if (Properties.Settings.Default.firstRun)
             {
                 /* UNCOMMENT UPON COMPLETION OF SETTINGS
-                Settings set = new Settings();  // new instance of settings window
-                set.Show();                     // show settings window
+                Settings set = new Settings();
+                set.Show();
                 */
-                splashTime.Stop();              // Stop counting seconds for splash screen
-                this.Hide();                    // Close splash screen
+                splashTime.Stop();
+                this.Hide();
+                //Properties.Settings.Default.firstRun = false;
             }
             else
             {
                 /* UNCOMMENT UPON COMPLETION OF SETTINGS
-                MainWindow win = new Keyboard_Interface.MainWindow();    // new instance of main window (keyboard)
-                win.Show();                                              // show keyboard (skip settings screen)
-				this.Hide();                                             // Close splash screen
+                MainWindow win = new Keyboard_Interface.MainWindow();
+                win.Show();
                 */
                 Settings set = new Settings();
                 set.Show();

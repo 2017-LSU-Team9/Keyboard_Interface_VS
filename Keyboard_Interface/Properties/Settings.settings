@@ -3,7 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="firstRun" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="themeRGB" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)">28</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -25,13 +25,25 @@ namespace Keyboard_Interface.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool firstRun {
             get {
                 return ((bool)(this["firstRun"]));
             }
             set {
                 this["firstRun"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("28")]
+        public byte themeRGB {
+            get {
+                return ((byte)(this["themeRGB"]));
+            }
+            set {
+                this["themeRGB"] = value;
             }
         }
     }
