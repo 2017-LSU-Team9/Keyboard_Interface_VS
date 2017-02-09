@@ -36,17 +36,18 @@ namespace Keyboard_Interface
             if (Properties.Settings.Default.firstRun)
             {
                 /* UNCOMMENT UPON COMPLETION OF SETTINGS
-                Settings set = new Settings();
-                set.Show();
+                Settings set = new Settings();  // new instance of settings window
+                set.Show();                     // show settings window
                 */
-                splashTime.Stop();
-                this.Hide();
+                splashTime.Stop();              // Stop counting seconds for splash screen
+                this.Hide();                    // Close splash screen
             }
             else
             {
                 /* UNCOMMENT UPON COMPLETION OF SETTINGS
-                MainWindow win = new Keyboard_Interface.MainWindow();
-                win.Show();
+                MainWindow win = new Keyboard_Interface.MainWindow();    // new instance of main window (keyboard)
+                win.Show();                                              // show keyboard (skip settings screen)
+				this.Hide();                                             // Close splash screen
                 */
                 Settings set = new Settings();
                 set.Show();
