@@ -65,12 +65,16 @@ namespace Keyboard_Interface
                 this.Background = new SolidColorBrush(Color.FromRgb(28,28,28));
                 themeTitle.Foreground = new SolidColorBrush(Color.FromRgb(255,255,255));
                 layoutTitle.Foreground = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+
+                Properties.Settings.Default.themeRGB = 28;
             }
             else
             {
                 this.Background = new SolidColorBrush(Color.FromRgb(209, 209, 209));
                 themeTitle.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
                 layoutTitle.Foreground = new SolidColorBrush(Color.FromRgb(0, 0, 0));
+
+                Properties.Settings.Default.themeRGB = 209;
             }
         }
 
@@ -105,7 +109,7 @@ namespace Keyboard_Interface
         private void apply_Click(object sender, RoutedEventArgs e)
         {
             apply.IsEnabled = false;
-            // SAVE SETTINGS
+            Properties.Settings.Default.Save();
         }
     }
 }

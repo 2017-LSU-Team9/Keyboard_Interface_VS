@@ -9,7 +9,32 @@
             <Setter.Value>
                 <ControlTemplate TargetType ="{x:Type Button}">
                     <Grid>
-                        <Ellipse x:Name ="OuterRing" Width ="150" Height ="150" Fill ="DarkGreen" Margin="0,0"/>
+                        <Ellipse x:Name ="OuterRing" Width ="150" Height ="150" Fill ="Black" Margin="0,0"/>
+                        <Ellipse x:Name ="InnerRing" Width ="120" Height ="120" Fill ="LightGray" Margin="0,0" />
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property ="IsMouseOver" Value ="True">
+                            <Setter TargetName ="OuterRing" Property ="Fill" Value ="MediumSeaGreen"/>
+                        </Trigger>
+                        <Trigger Property ="IsPressed" Value ="True">
+                            <Setter TargetName ="OuterRing" Property ="Height" Value ="90"/>
+                            <Setter TargetName ="OuterRing" Property ="Width" Value ="90"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key ="closeButtonTemplate" TargetType ="{x:Type Button}">
+        <Setter Property ="Foreground" Value ="Black"/>
+        <Setter Property ="FontWeight" Value ="Bold"/>
+        <Setter Property ="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType ="{x:Type Button}">
+                    <Grid>
+                        <Ellipse x:Name ="OuterRing" Width ="150" Height ="150" Fill ="Red" Margin="0,0"/>
                         <Ellipse x:Name ="InnerRing" Width ="120" Height ="120" Fill ="LightGray" Margin="0,0" />
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
@@ -34,7 +59,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType ="{x:Type Button}">
                     <Grid>
-                        <Ellipse x:Name ="OuterRing" Width ="215" Height ="215" Fill ="DarkGreen" Margin="0,0"/>
+                        <Ellipse x:Name ="OuterRing" Width ="215" Height ="215" Fill ="Black" Margin="0,0"/>
                         <Ellipse x:Name ="InnerRing" Width ="185" Height ="185" Fill ="LightGray" Margin="0,0" />
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
@@ -51,5 +76,56 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key ="sym_capsButtonTemplate" TargetType ="{x:Type Button}">
+        <Setter Property ="Foreground" Value ="Black"/>
+        <Setter Property ="FontWeight" Value ="Bold"/>
+        <Setter Property ="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType ="{x:Type Button}">
+                    <Grid>
+                        <Ellipse x:Name ="OuterRing" Width ="150" Height ="150" Fill ="DarkCyan" Margin="0,0"/>
+                        <Ellipse x:Name ="InnerRing" Width ="120" Height ="120" Fill ="LightGray" Margin="0,0" />
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property ="IsMouseOver" Value ="True">
+                            <Setter TargetName ="OuterRing" Property ="Fill" Value ="DarkBlue"/>
+                        </Trigger>
+                        <Trigger Property ="IsPressed" Value ="True">
+                            <Setter TargetName ="OuterRing" Property ="Height" Value ="100"/>
+                            <Setter TargetName ="OuterRing" Property ="Width" Value ="90"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key ="bckspcButtonTemplate" TargetType ="{x:Type Button}">
+        <Setter Property ="Foreground" Value ="Black"/>
+        <Setter Property ="FontWeight" Value ="Bold"/>
+        <Setter Property ="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType ="{x:Type Button}">
+                    <Grid>
+                        <Rectangle x:Name ="OuterRing" Width ="215" Height ="215" Fill ="Red" Margin="0,0"/>
+                        <Rectangle x:Name ="InnerRing" Width ="175" Height ="120" Fill ="LightGray" Margin="0,0" />
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property ="IsMouseOver" Value ="True">
+                            <Setter TargetName ="OuterRing" Property ="Fill" Value ="MediumSeaGreen"/>
+                        </Trigger>
+                        <Trigger Property ="IsPressed" Value ="True">
+                            <Setter TargetName ="OuterRing" Property ="Height" Value ="100"/>
+                            <Setter TargetName ="OuterRing" Property ="Width" Value ="90"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 
 </ResourceDictionary>
