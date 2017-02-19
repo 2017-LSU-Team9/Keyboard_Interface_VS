@@ -30,31 +30,107 @@ namespace Keyboard_Interface
             Application.Current.Shutdown();
         }
 
-        private void a_Click(object sender, RoutedEventArgs e)
+        private void a_Click (object sender, RoutedEventArgs e)
         {
-            //if(Properties.Settings.Default.CAPS == true){
             input.AppendText("A");
-            // Call function to show all lowercase
-            //Properties.Settings.Default.CAPS = false;
-            //}
-
-            //else if(Properties.Settings.Default.CAPSkey == true){
-            // input.AppendText("A");
-            //}
-
-            //else
-            //{
-            // input.AppendText("a");
-            //}
         }
-
         private void zero_Click(object sender, RoutedEventArgs e)
         {
             input.AppendText("0");
         }
+        private void one_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("1");
+        }
+        private void two_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("2");
+        }
+        private void three_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("3");
+        }
+        private void four_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("4");
+        }
+        private void five_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("5");
+        }
+        private void six_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("6");
+        }
+        private void seven_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("7");
+        }
+        private void eight_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("8");
+        }
+        private void nine_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("9");
+        }
+        private void at_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("@");
+        }
+        private void dollar_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("$");
+        }
+        private void apos_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("'");
+        }
+        private void pound_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("#");
+        }
+        private void opar_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("(");
+        }
+        private void cpar_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText(")");
+        }
+        private void slash_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("/");
+        }
+        private void colon_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText(":");
+        }
+        private void semi_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText(";");
+        }
+        private void percent_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText("%");
+        }
+        private void space_Click(object sender, RoutedEventArgs e)
+        {
+            input.AppendText(" ");
+        }
         private void bksp_Click(object sender, RoutedEventArgs e)
         {
-            input.Text = input.Text.Remove(input.Text.Length - 1, 1);
+            if (input.Text.Length != 0)
+                input.Text = input.Text.Remove(input.Text.Length - 1, 1);
+        }
+        private void clear_Click(object sender, RoutedEventArgs e)
+        {
+            if (input.Text.Length != 0)
+                input.Text = "";
+        }
+        private void sym_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
