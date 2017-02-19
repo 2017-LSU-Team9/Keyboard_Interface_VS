@@ -27,7 +27,7 @@ namespace Keyboard_Interface
             InitializeComponent();
 
             splashTime.Tick += new EventHandler(splashTime_tick);
-            splashTime.Interval = new TimeSpan(0, 0, 6);
+            splashTime.Interval = new TimeSpan(0, 0, 2);        // CHANGE BACK to 6
             splashTime.Start();
         }
 

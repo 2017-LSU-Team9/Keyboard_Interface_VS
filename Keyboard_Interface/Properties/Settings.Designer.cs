@@ -34,5 +34,17 @@ namespace Keyboard_Interface.Properties {
                 this["firstRun"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("209")]
+        public byte themeRGB {
+            get {
+                return ((byte)(this["themeRGB"]));
+            }
+            set {
+                this["themeRGB"] = value;
+            }
+        }
     }
 }
