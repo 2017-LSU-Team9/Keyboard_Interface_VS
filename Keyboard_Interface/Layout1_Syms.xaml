@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Keyboard_Interface"
         mc:Ignorable="d"
-        Title="Layout1_Syms" Width="1920" Height="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Cursor="Arrow" WindowState="Maximized" d:DesignWidth="1965.983" d:DesignHeight="1085.588">
+        Title="Layout1_Syms" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Maximized" d:DesignWidth="1965.983" d:DesignHeight="1085.588">
 
     <Grid Margin="0,0,0,-29" Cursor="Arrow">
         <!--

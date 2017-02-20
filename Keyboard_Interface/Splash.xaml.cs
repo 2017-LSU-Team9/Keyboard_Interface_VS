@@ -46,7 +46,7 @@ namespace Keyboard_Interface
             else
             {
                 /* UNCOMMENT UPON COMPLETION OF SETTINGS
-                MainWindow win = new Keyboard_Interface.MainWindow();
+                Layout1_L win = new Layout1_L("");
                 win.Show();
                 */
                 Settings set = new Settings();

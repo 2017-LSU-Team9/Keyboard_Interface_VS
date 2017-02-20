@@ -19,9 +19,10 @@ namespace Keyboard_Interface
     /// </summary>
     public partial class Layout1_Syms : Window
     {
-        public Layout1_Syms()
+        public Layout1_Syms(string textbox_string)
         {
             InitializeComponent();
+            input.Text = textbox_string;
             this.Background = new SolidColorBrush(Color.FromRgb(Properties.Settings.Default.themeRGB, Properties.Settings.Default.themeRGB, Properties.Settings.Default.themeRGB));
         }
 
@@ -130,6 +131,9 @@ namespace Keyboard_Interface
         }
         private void sym_Click(object sender, RoutedEventArgs e)
         {
+            string textbox_string = input.Text;
+            Layout1_L keyboard = new Layout1_L(textbox_string);
+            keyboard.Show();
             this.Close();
         }
     }

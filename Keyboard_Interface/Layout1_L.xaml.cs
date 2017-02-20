@@ -22,9 +22,10 @@ namespace Keyboard_Interface
 
     public partial class Layout1_L : Window
     {
-        public Layout1_L()
+        public Layout1_L(string textbox_string)
         {
             InitializeComponent();
+            input.Text = textbox_string;
             this.Background = new SolidColorBrush(Color.FromRgb(Properties.Settings.Default.themeRGB, Properties.Settings.Default.themeRGB, Properties.Settings.Default.themeRGB));
         }
 
@@ -602,8 +603,10 @@ namespace Keyboard_Interface
         }
         private void sym_Click(object sender, RoutedEventArgs e)
         {
-            Layout1_Syms keyboard2 = new Layout1_Syms();
+            string textbox_string = input.Text;
+            Layout1_Syms keyboard2 = new Layout1_Syms(textbox_string);
             keyboard2.Show();
+            this.Close();
         }
         private void caps_Click(object sender, RoutedEventArgs e)
         {

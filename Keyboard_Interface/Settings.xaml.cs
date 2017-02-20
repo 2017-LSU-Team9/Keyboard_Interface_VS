@@ -101,7 +101,7 @@ namespace Keyboard_Interface
 
         private void ok_Click(object sender, RoutedEventArgs e)
         {
-            Layout1_L keyboard = new Layout1_L();
+            Layout1_L keyboard = new Layout1_L("");
             keyboard.Show();
             this.Close();
         }
