@@ -70,5 +70,17 @@ namespace Keyboard_Interface.Properties {
                 this["CAPsKey"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool paused {
+            get {
+                return ((bool)(this["paused"]));
+            }
+            set {
+                this["paused"] = value;
+            }
+        }
     }
 }

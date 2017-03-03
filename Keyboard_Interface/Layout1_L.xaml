@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Layout1_L" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Maximized" d:DesignWidth="1965.983" d:DesignHeight="1085.588">
 
-   <!-- <Grid Margin="0,0,0,-29">
+    <!-- <Grid Margin="0,0,0,-29">
         <Grid.RowDefinitions>
             <RowDefinition Height="225" />
             <RowDefinition Height="39" />
@@ -21,7 +21,7 @@
     <Viewbox>
         <Grid>
             <!--BUTTONS/LETTER KEYS _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________-->
-            <Button x:Name="close" Content="CLOSE" HorizontalAlignment="Left" Margin="1742,29,-21,0" VerticalAlignment="Top" Click="close_Click" FontSize="32px" Style="{StaticResource closeButtonTemplate}" Height="164" Width="193" RenderTransformOrigin="0.409,0.451" />
+            <Button x:Name="close" Content="CLOSE" HorizontalAlignment="Left" Margin="1742,29,-21,0" VerticalAlignment="Top" Click="close_Click" FontSize="32px" Style="{StaticResource closeButtonTemplate}" Height="164" Width="193" RenderTransformOrigin="0.409,0.451" Background="{x:Null}" />
 
             <Button x:Name="a" Content="A" HorizontalAlignment="Left" Margin="842,699,0,0" VerticalAlignment="Top" Click="a_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
             <Button x:Name="b" Content="B" HorizontalAlignment="Left" Margin="442,699,0,0" VerticalAlignment="Top" Click="b_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
@@ -65,6 +65,7 @@
             <Button x:Name="sym" Content="SYM" HorizontalAlignment="Left" Margin="-70,699,0,0" VerticalAlignment="Top" Click="sym_Click" FontSize="25" Style="{StaticResource sym_capsButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="368" Height="150" />
             <Button x:Name="clear" Content="CLEAR" HorizontalAlignment="Left" Margin="1433,910,0,0" VerticalAlignment="Top" Click="clear_Click" FontSize="25" Style="{StaticResource bckspcButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="368" Height="150" />
             <Button x:Name="caps" Content="CAPS" HorizontalAlignment="Left" Margin="-70,910,0,0" VerticalAlignment="Top" Click="caps_Click" FontSize="25" Style="{StaticResource sym_capsButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="368" Height="150" />
+            <Button x:Name="disableAll" Content="" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="29" Height="35" BorderBrush="White" Click="disableALL"/>
             <!-- Comment -->
         </Grid>
     </Viewbox>
