@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Keyboard_Interface"
-        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Keyboard_Interface.Layout1_L"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Keyboard_Interface.Layout2"
         mc:Ignorable="d"
         Title="Layout1_L" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Maximized" d:DesignWidth="1965.983" d:DesignHeight="1085.588">
 
@@ -18,7 +18,7 @@
             <RowDefinition Height="204" />
         </Grid.RowDefinitions> -->
 
-    <Viewbox Margin="-424,10,-439,208">
+    <Viewbox>
         <Grid>
             <!--BUTTONS/LETTER KEYS _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________-->
             <Button x:Name="close" Content="CLOSE" HorizontalAlignment="Left" Margin="1742,29,-21,0" VerticalAlignment="Top" Click="close_Click" FontSize="32px" Style="{StaticResource closeButtonTemplate}" Height="164" Width="193" RenderTransformOrigin="0.409,0.451" Background="{x:Null}" />

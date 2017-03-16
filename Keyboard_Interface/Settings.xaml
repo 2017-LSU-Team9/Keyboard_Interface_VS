@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Keyboard_Interface"
         mc:Ignorable="d"
-        Title="Settings" Height="1024.872" Width="911.243" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#D1D1D1">
+        Title="Settings" ResizeMode="CanResize" Height="1024.872" Width="911.243" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#D1D1D1">
 
     <Grid>
 
@@ -26,9 +26,9 @@
         </ComboBox>
 
         <Label x:Name="themeTitle" Margin="81,136,636,831" FontSize="24" FontWeight="Bold" Content="Theme Style"/>
-        <Button x:Name="ok" Content="OK" HorizontalAlignment="Left" Margin="400,889,0,0" VerticalAlignment="Top" Width="120" Height="71" Click="ok_Click"/>
-        <Button x:Name="cancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="560,889,0,0" Width="120" Height="71" Click="cancel_Click"/>
-        <Button x:Name="apply" Content="Apply" HorizontalAlignment="Left" Margin="720,889,0,0" VerticalAlignment="Top" Width="120" Height="71" Click="apply_Click"/>
+        <Button x:Name="ok" Content="OK" HorizontalAlignment="Left" Margin="409,438,0,0" VerticalAlignment="Top" Width="120" Height="71" Click="ok_Click"/>
+        <Button x:Name="cancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="569,438,0,0" Width="120" Height="71" Click="cancel_Click"/>
+        <Button x:Name="apply" Content="Apply" HorizontalAlignment="Left" Margin="735,438,0,0" VerticalAlignment="Top" Width="120" Height="71" Click="apply_Click"/>
         <Label x:Name="layoutTitle" Margin="81,218,659,739" FontSize="24" FontWeight="Bold" Content="Key Layout"/>
         <ComboBox x:Name="layoutCombo" HorizontalAlignment="Left" Margin="480,227,0,0" VerticalAlignment="Top" Width="118" Height="36" RenderTransformOrigin="0.507,0.5" FontSize="18" Loaded ="layoutCombo_Loaded" SelectionChanged="layoutCombo_SelectionChanged"></ComboBox>
         <Image x:Name="eeLogo" HorizontalAlignment="Left" Height="137" Margin="735,10,0,0" VerticalAlignment="Top" Width="158" Source="logos/LSUee.png"/>

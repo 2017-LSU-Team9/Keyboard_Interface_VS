@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Resources;
 using System.Windows.Shapes;
 
 namespace Keyboard_Interface
@@ -22,6 +23,11 @@ namespace Keyboard_Interface
         public Layout1_Syms(string textbox_string)
         {
             InitializeComponent();
+
+            StreamResourceInfo sri = Application.GetResourceStream(new Uri("blue_curs1.cur", UriKind.Relative));
+            Cursor customCursor = new Cursor(sri.Stream);
+            Mouse.OverrideCursor = customCursor;
+
             input.Text = textbox_string;
             this.Background = new SolidColorBrush(Color.FromRgb(Properties.Settings.Default.themeRGB, Properties.Settings.Default.themeRGB, Properties.Settings.Default.themeRGB));
         }

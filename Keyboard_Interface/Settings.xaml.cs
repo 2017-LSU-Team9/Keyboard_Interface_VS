@@ -36,8 +36,8 @@ namespace Keyboard_Interface
         {
             List<string> data = new List<string>();
 
-            data.Add("Default");
-            data.Add("Future Layout");
+            data.Add("Layout1 (Zoomed Out)");
+            data.Add("Layout2 (Full Screen)");
 
             var themeCombo = sender as ComboBox;
             themeCombo.ItemsSource = data;
@@ -80,7 +80,19 @@ namespace Keyboard_Interface
 
         private void layoutCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            apply.IsEnabled = true;
 
+            int selection = layoutCombo.SelectedIndex;
+            
+            if(selection == 0)
+            {
+                Properties.Settings.Default.layoutSelect = "layout1" ;
+            }
+
+            else
+            {
+                Properties.Settings.Default.layoutSelect = "layout2";
+            }
         }
 
 
@@ -101,9 +113,18 @@ namespace Keyboard_Interface
 
         private void ok_Click(object sender, RoutedEventArgs e)
         {
-            Layout1_L keyboard = new Layout1_L("");
-            keyboard.Show();
-            this.Close();
+            if (Properties.Settings.Default.layoutSelect == "layout1")
+            {
+                Layout1_L keyboard = new Layout1_L("");
+                keyboard.Show();
+                this.Close();
+            }
+            else
+            {
+                Layout2 keyboard = new Layout2("");
+                keyboard.Show();
+                this.Close();
+            }
         }
 
         private void apply_Click(object sender, RoutedEventArgs e)

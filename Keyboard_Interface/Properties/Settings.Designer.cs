@@ -82,5 +82,17 @@ namespace Keyboard_Interface.Properties {
                 this["paused"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("layout1")]
+        public string layoutSelect {
+            get {
+                return ((string)(this["layoutSelect"]));
+            }
+            set {
+                this["layoutSelect"] = value;
+            }
+        }
     }
 }

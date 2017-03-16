@@ -7,53 +7,47 @@
         mc:Ignorable="d"
         Title="Layout1_Syms" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Maximized" d:DesignWidth="1965.983" d:DesignHeight="1085.588">
 
-    <Grid Margin="0,0,0,-29" Cursor="Arrow">
-        <!--
-        <Grid.RowDefinitions>
-            <RowDefinition Height="225" />
-            <RowDefinition Height="39" />
-            <RowDefinition Height="204" />
-            <RowDefinition Height="204" />
-            <RowDefinition Height="204" />
-            <RowDefinition Height="204" />
-        </Grid.RowDefinitions> -->
 
-        <!--BUTTONS/LETTER KEYS _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________-->
-        <Button x:Name="close" Content="CLOSE" HorizontalAlignment="Left" Margin="1742,29,-21,0" VerticalAlignment="Top" Click="close_Click" FontSize="32px" Style="{StaticResource roundButtonTemplate}" Height="164" Width="193" RenderTransformOrigin="0.409,0.451" />
+    <Viewbox>
+        <Grid>
+
+            <!--BUTTONS/LETTER KEYS _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________-->
+            <Button x:Name="close" Content="CLOSE" HorizontalAlignment="Left" Margin="1742,29,-21,0" VerticalAlignment="Top" Click="close_Click" FontSize="32px" Style="{StaticResource roundButtonTemplate}" Height="164" Width="193" RenderTransformOrigin="0.409,0.451" />
 
 
-        <Button x:Name="zero" Content="0" HorizontalAlignment="Left" Margin="842,296,0,0" VerticalAlignment="Top" Click="zero_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="one" Content="1" HorizontalAlignment="Left" Margin="644,473,0,0" VerticalAlignment="Top" Click="one_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="two" Content="2" HorizontalAlignment="Left" Margin="842,473,0,0" VerticalAlignment="Top" Click="two_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="three" Content="3" HorizontalAlignment="Left" Margin="1039,473,0,0" VerticalAlignment="Top" Click="three_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="four" Content="4" HorizontalAlignment="Left" Margin="644,682,0,0" VerticalAlignment="Top" Click="four_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="five" Content="5" HorizontalAlignment="Left" Margin="842,682,0,0" VerticalAlignment="Top" Click="five_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="six" Content="6" HorizontalAlignment="Left" Margin="1039,682,0,0" VerticalAlignment="Top" Click="six_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="seven" Content="7" HorizontalAlignment="Left" Margin="644,877,0,0" VerticalAlignment="Top" Click="seven_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="eight" Content="8" HorizontalAlignment="Left" Margin="842,877,0,0" VerticalAlignment="Top" Click="eight_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="nine" Content="9" HorizontalAlignment="Left" Margin="1039,877,0,0" VerticalAlignment="Top" Click="nine_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="at_sym" Content="@" HorizontalAlignment="Left" Margin="1221,296,0,0" VerticalAlignment="Top" Click="at_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="dollar" Content="$" HorizontalAlignment="Left" Margin="644,296,0,0" VerticalAlignment="Top" Click="dollar_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="apostrophe" Content="&apos;" HorizontalAlignment="Left" Margin="1405,681,0,0" VerticalAlignment="Top" Click="apos_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="pound" Content="#" HorizontalAlignment="Left" Margin="1405,473,0,0" VerticalAlignment="Top" Click="pound_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="open_par" Content="(" HorizontalAlignment="Left" Margin="446,473,0,0" VerticalAlignment="Top" Click="opar_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="close_par" Content=")" HorizontalAlignment="Left" Margin="1221,473,0,0" VerticalAlignment="Top" Click="cpar_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="backslash" Content="/" HorizontalAlignment="Left" Margin="446,296,0,0" VerticalAlignment="Top" Click="slash_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="colon" Content=":" HorizontalAlignment="Left" Margin="446,681,0,0" VerticalAlignment="Top" Click="colon_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="semicolon" Content=";" HorizontalAlignment="Left" Margin="1221,681,0,0" VerticalAlignment="Top" Click="semi_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
-        <Button x:Name="percent" Content="%" HorizontalAlignment="Left" Margin="1039,296,0,0" VerticalAlignment="Top" Click="percent_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="0.525,0.523" />
-        <Button x:Name="space" Content="SPACE" HorizontalAlignment="Left" Margin="69,296,0,0" VerticalAlignment="Top" Click="space_Click" FontSize="58" Style="{StaticResource spaceButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="256" Height="220" />
+            <Button x:Name="zero" Content="0" HorizontalAlignment="Left" Margin="842,296,0,0" VerticalAlignment="Top" Click="zero_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="one" Content="1" HorizontalAlignment="Left" Margin="644,473,0,0" VerticalAlignment="Top" Click="one_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="two" Content="2" HorizontalAlignment="Left" Margin="842,473,0,0" VerticalAlignment="Top" Click="two_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="three" Content="3" HorizontalAlignment="Left" Margin="1039,473,0,0" VerticalAlignment="Top" Click="three_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="four" Content="4" HorizontalAlignment="Left" Margin="644,682,0,0" VerticalAlignment="Top" Click="four_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="five" Content="5" HorizontalAlignment="Left" Margin="842,682,0,0" VerticalAlignment="Top" Click="five_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="six" Content="6" HorizontalAlignment="Left" Margin="1039,682,0,0" VerticalAlignment="Top" Click="six_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="seven" Content="7" HorizontalAlignment="Left" Margin="644,877,0,0" VerticalAlignment="Top" Click="seven_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="eight" Content="8" HorizontalAlignment="Left" Margin="842,877,0,0" VerticalAlignment="Top" Click="eight_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="nine" Content="9" HorizontalAlignment="Left" Margin="1039,877,0,0" VerticalAlignment="Top" Click="nine_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="at_sym" Content="@" HorizontalAlignment="Left" Margin="1221,296,0,0" VerticalAlignment="Top" Click="at_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="dollar" Content="$" HorizontalAlignment="Left" Margin="644,296,0,0" VerticalAlignment="Top" Click="dollar_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="apostrophe" Content="&apos;" HorizontalAlignment="Left" Margin="1405,681,0,0" VerticalAlignment="Top" Click="apos_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="pound" Content="#" HorizontalAlignment="Left" Margin="1405,473,0,0" VerticalAlignment="Top" Click="pound_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="open_par" Content="(" HorizontalAlignment="Left" Margin="446,473,0,0" VerticalAlignment="Top" Click="opar_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="close_par" Content=")" HorizontalAlignment="Left" Margin="1221,473,0,0" VerticalAlignment="Top" Click="cpar_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="backslash" Content="/" HorizontalAlignment="Left" Margin="446,296,0,0" VerticalAlignment="Top" Click="slash_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="colon" Content=":" HorizontalAlignment="Left" Margin="446,681,0,0" VerticalAlignment="Top" Click="colon_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="semicolon" Content=";" HorizontalAlignment="Left" Margin="1221,681,0,0" VerticalAlignment="Top" Click="semi_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" />
+            <Button x:Name="percent" Content="%" HorizontalAlignment="Left" Margin="1039,296,0,0" VerticalAlignment="Top" Click="percent_Click" FontSize="72" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" RenderTransformOrigin="0.525,0.523" />
+            <Button x:Name="space" Content="SPACE" HorizontalAlignment="Left" Margin="69,296,0,0" VerticalAlignment="Top" Click="space_Click" FontSize="58" Style="{StaticResource spaceButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="256" Height="220" />
 
-        <Button x:Name="bksp" Content="Backspace" HorizontalAlignment="Left" Margin="171,877,0,0" VerticalAlignment="Top" Click="bksp_Click" FontSize="25" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="368" Height="150" />
-        <Button x:Name="bksp1" Content="Backspace" HorizontalAlignment="Left" Margin="1322,877,0,0" VerticalAlignment="Top" Click="bksp_Click" FontSize="25" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="368" Height="150" />
+            <Button x:Name="bksp" Content="Backspace" HorizontalAlignment="Left" Margin="171,877,0,0" VerticalAlignment="Top" Click="bksp_Click" FontSize="25" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="368" Height="150" />
+            <Button x:Name="bksp1" Content="Backspace" HorizontalAlignment="Left" Margin="1322,877,0,0" VerticalAlignment="Top" Click="bksp_Click" FontSize="25" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="368" Height="150" />
 
 
-        <!-- Text Box Input _______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________-->
-        <TextBox x:Name="input" HorizontalAlignment="Left" Height="164" Margin="32,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1728" IsReadOnly="True" SpellCheck.IsEnabled="True" FontFamily="Arial" FontSize="120" BorderThickness="5" Text="" />
+            <!-- Text Box Input _______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________-->
+            <TextBox x:Name="input" HorizontalAlignment="Left" Height="164" Margin="32,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1728" IsReadOnly="True" SpellCheck.IsEnabled="True" FontFamily="Arial" FontSize="120" BorderThickness="5" Text="" />
 
-        <Button x:Name="sym" Content="SYM" HorizontalAlignment="Left" Margin="10,598,0,0" VerticalAlignment="Top" Click="sym_Click" FontSize="25" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="368" Height="150" />
-        <Button x:Name="clear" Content="CLEAR" HorizontalAlignment="Left" Margin="1649,296,-103,0" VerticalAlignment="Top" Click="clear_Click" FontSize="25" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="368" Height="150" />
+            <Button x:Name="sym" Content="SYM" HorizontalAlignment="Left" Margin="10,598,0,0" VerticalAlignment="Top" Click="sym_Click" FontSize="25" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="368" Height="150" />
+            <Button x:Name="clear" Content="CLEAR" HorizontalAlignment="Left" Margin="1649,296,-103,0" VerticalAlignment="Top" Click="clear_Click" FontSize="25" Style="{StaticResource roundButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="368" Height="150" />
 
-        <!-- Comment -->
-    </Grid>
+            <!-- Comment -->
+        </Grid>
+    </Viewbox>
 </Window>

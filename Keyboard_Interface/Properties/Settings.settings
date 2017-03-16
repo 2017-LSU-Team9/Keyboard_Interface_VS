@@ -17,5 +17,8 @@
     <Setting Name="paused" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="layoutSelect" Type="System.String" Scope="User">
+      <Value Profile="(Default)">layout1</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
