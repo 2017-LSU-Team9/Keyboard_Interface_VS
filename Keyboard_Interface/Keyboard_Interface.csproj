@@ -87,6 +87,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -115,10 +116,10 @@
     <Compile Include="Layout1_Syms.xaml.cs">
       <DependentUpon>Layout1_Syms.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Layout2.xaml.cs">
-      <DependentUpon>Layout2.xaml</DependentUpon>
+    <Compile Include="Layout1_L.xaml.cs">
+      <DependentUpon>Layout1_L.xaml</DependentUpon>
     </Compile>
-    <Page Include="Layout1_L.xaml">
+    <Page Include="Layout2.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -126,8 +127,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Layout1_L.xaml.cs">
-      <DependentUpon>Layout1_L.xaml</DependentUpon>
+    <Compile Include="Layout2.xaml.cs">
+      <DependentUpon>Layout2.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Settings.xaml">
@@ -146,7 +147,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Layout2.xaml">
+    <Page Include="Layout1_L.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -203,6 +204,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="blue_curs1.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="layouts\layout1_Image.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

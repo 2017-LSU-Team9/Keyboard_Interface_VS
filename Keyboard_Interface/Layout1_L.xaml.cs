@@ -14,22 +14,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Resources;
 using System.Windows.Shapes;
+using System.Speech.Synthesis;
 
 namespace Keyboard_Interface
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-
+    /// 
 
     public partial class Layout1_L : Window
     {
+
         public Layout1_L(string textbox_string)
         {
             InitializeComponent();
-
-            //Stream cursorStream = Application.GetResourceStream(new Uri("pack://application:,,,/blue_curs1.cur")).Stream;
-           // this.Cursor = new Cursor(cursorStream);
 
             StreamResourceInfo sri = Application.GetResourceStream(new Uri("blue_curs1.cur", UriKind.Relative));
             Cursor customCursor = new Cursor(sri.Stream);
@@ -51,25 +50,30 @@ namespace Keyboard_Interface
                 case MessageBoxResult.No:
                     break;
                 case MessageBoxResult.Cancel:
+                    Settings settings = new Keyboard_Interface.Settings();
+                    settings.Show();
+                    this.Close();
                     break;
             }
         }
 
         private void a_Click(object sender, RoutedEventArgs e)
-        {   
-            if(Properties.Settings.Default.CAPs == true && Properties.Settings.Default.CAPsKey == false){
+        {
+            if (Properties.Settings.Default.CAPs == true && Properties.Settings.Default.CAPsKey == false)
+            {
                 input.AppendText("A");
                 lowerCase();
                 Properties.Settings.Default.CAPs = false;
             }
 
-            else if(Properties.Settings.Default.CAPs == true && Properties.Settings.Default.CAPsKey == true){
+            else if (Properties.Settings.Default.CAPs == true && Properties.Settings.Default.CAPsKey == true)
+            {
                 input.AppendText("A");
             }
 
             else
             {
-               input.AppendText("a");
+                input.AppendText("a");
             }
         }
 
@@ -587,7 +591,7 @@ namespace Keyboard_Interface
             Properties.Settings.Default.CAPs = true;
             Properties.Settings.Default.CAPsKey = false;
         }
-        
+
         private void comma_Click(object sender, RoutedEventArgs e)
         {
             input.AppendText(",");
@@ -613,8 +617,17 @@ namespace Keyboard_Interface
 
         private void bksp_Click(object sender, RoutedEventArgs e)
         {
+            if (Properties.Settings.Default.DEVMODE == true)
+            {
+                string str = input.Text;
+                int length = str.Length;
+                char removedChar = str[length - 1];
+                MistakeModule(input.Text, removedChar);
+            }
+
             if (input.Text.Length != 0)
                 input.Text = input.Text.Remove(input.Text.Length - 1, 1);
+
         }
 
         private void clear_Click(object sender, RoutedEventArgs e)
@@ -653,6 +666,13 @@ namespace Keyboard_Interface
                 Properties.Settings.Default.CAPsKey = true;
                 Properties.Settings.Default.CAPs = false;
             }
+        }
+
+        private void voice_Click(object sender, RoutedEventArgs e)
+        {
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+            synth.SetOutputToDefaultAudioDevice();
+            synth.Speak(input.Text);
         }
 
         private void lowerCase()
@@ -717,7 +737,8 @@ namespace Keyboard_Interface
 
         private void disableALL(object sender, RoutedEventArgs ee)
         {
-            if (Properties.Settings.Default.paused == false) {
+            if (Properties.Settings.Default.paused == false)
+            {
                 Properties.Settings.Default.paused = true;
                 disableAll.Background = new SolidColorBrush(Color.FromRgb(230, 0, 0));
                 a.IsEnabled = false;
@@ -759,7 +780,7 @@ namespace Keyboard_Interface
                 sym.IsEnabled = false;
 
             }
-           else
+            else
             {
                 Properties.Settings.Default.paused = false;
                 disableAll.Background = new SolidColorBrush(Color.FromRgb(Properties.Settings.Default.themeRGB, Properties.Settings.Default.themeRGB, Properties.Settings.Default.themeRGB));
@@ -801,6 +822,27 @@ namespace Keyboard_Interface
                 caps.IsEnabled = true;
                 sym.IsEnabled = true;
             }
+        }
+
+        private void InputtoFile(string str)
+        {
+            String filename = "D:\\FileOutPutTest\\test.txt";
+            FileStream fs = new FileStream(filename, FileMode.Append, FileAccess.Write);
+            StreamWriter objWrite = new StreamWriter(fs);
+            objWrite.Write("\r\n \r\n");
+            objWrite.Write(str);
+            objWrite.Close();
+            
+        }
+        private void MistakeModule(string currentText, char removedChar)
+        {
+            String output;
+            String dt = DateTime.Now.ToString("yyyy-MM-dd  hh:mm:ss");
+            String spacing = "                      ";
+
+
+            output = dt + spacing + currentText + spacing + removedChar + "\r\n";
+            InputtoFile(output);
         }
     }
 }

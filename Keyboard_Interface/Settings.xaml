@@ -5,32 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Keyboard_Interface"
         mc:Ignorable="d"
-        Title="Settings" ResizeMode="CanResize" Height="1024.872" Width="911.243" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#D1D1D1">
+        Title="Settings" ResizeMode="CanResize" Height="800.872" Width="911.243" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="#D1D1D1">
 
-    <Grid>
+    <ScrollViewer>
+        <Grid>
 
-        <ComboBox x:Name="themeCombo" HorizontalAlignment="Left" Margin="480,143,0,0" VerticalAlignment="Top" Width="118" Height="36" RenderTransformOrigin="0.507,0.5" 
-                  FontSize="18" SelectionChanged="themeCombo_SelectionChanged">
-            <ComboBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <Rectangle Fill="#1C1C1C" Width="24" Height="16" Margin="0,2,5,2" />
-                    <TextBlock Text="Dark" />
-                </StackPanel>
-            </ComboBoxItem>
-            <ComboBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <Rectangle Fill="#D1D1D1" Width="24" Height="16" Margin="0,2,5,2" />
-                    <TextBlock Text="Light" />
-                </StackPanel>
-            </ComboBoxItem>
-        </ComboBox>
+            <ComboBox x:Name="themeCombo" HorizontalAlignment="Left" Margin="480,143,0,0" VerticalAlignment="Top" Width="105" Height="36" RenderTransformOrigin="0.507,0.5" 
+                  FontSize="18" Loaded="themeCombo_Loaded" SelectionChanged="themeCombo_SelectionChanged">
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#1C1C1C" Width="24" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="Dark" />
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="#D1D1D1" Width="24" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="Light" />
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
 
-        <Label x:Name="themeTitle" Margin="81,136,636,831" FontSize="24" FontWeight="Bold" Content="Theme Style"/>
-        <Button x:Name="ok" Content="OK" HorizontalAlignment="Left" Margin="409,438,0,0" VerticalAlignment="Top" Width="120" Height="71" Click="ok_Click"/>
-        <Button x:Name="cancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="569,438,0,0" Width="120" Height="71" Click="cancel_Click"/>
-        <Button x:Name="apply" Content="Apply" HorizontalAlignment="Left" Margin="735,438,0,0" VerticalAlignment="Top" Width="120" Height="71" Click="apply_Click"/>
-        <Label x:Name="layoutTitle" Margin="81,218,659,739" FontSize="24" FontWeight="Bold" Content="Key Layout"/>
-        <ComboBox x:Name="layoutCombo" HorizontalAlignment="Left" Margin="480,227,0,0" VerticalAlignment="Top" Width="118" Height="36" RenderTransformOrigin="0.507,0.5" FontSize="18" Loaded ="layoutCombo_Loaded" SelectionChanged="layoutCombo_SelectionChanged"></ComboBox>
-        <Image x:Name="eeLogo" HorizontalAlignment="Left" Height="137" Margin="735,10,0,0" VerticalAlignment="Top" Width="158" Source="logos/LSUee.png"/>
-    </Grid>
+            <Label x:Name="themeTitle" Margin="81,136,636,831" FontSize="24" FontWeight="Bold" Content="Theme Style"/>
+            <Button x:Name="ok" Content="OK" HorizontalAlignment="Left" Margin="394,774,0,0" VerticalAlignment="Top" Width="120" Height="71" Click="ok_Click" RenderTransformOrigin="0.5,0.563"/>
+            <Button x:Name="cancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="555,774,0,0" Width="120" Height="71" Click="cancel_Click"/>
+            <Button x:Name="apply" Content="Apply" HorizontalAlignment="Left" Margin="735,774,0,0" VerticalAlignment="Top" Width="120" Height="71" Click="apply_Click"/>
+            <Label x:Name="layoutTitle" Margin="81,218,659,739" FontSize="24" FontWeight="Bold" Content="Key Layout"/>
+            <ComboBox x:Name="layoutCombo" HorizontalAlignment="Left" Margin="480,227,0,0" VerticalAlignment="Top" Width="195" Height="36" RenderTransformOrigin="0.507,0.5" FontSize="18" Loaded ="layoutCombo_Loaded" SelectionChanged="layoutCombo_SelectionChanged"></ComboBox>
+            <Image x:Name="eeLogo" HorizontalAlignment="Left" Height="137" Margin="735,10,0,0" VerticalAlignment="Top" Width="158" Source="logos/LSUee.png"/>
+            <Label x:Name="developerTitle" Margin="81,660,604,407" FontSize="24" FontWeight="Bold" Content="Developer Mode"/>
+            <ComboBox x:Name="developerCombo" HorizontalAlignment="Left" Margin="480,660,0,0" VerticalAlignment="Top" Width="65" Height="36" RenderTransformOrigin="0.507,0.5" FontSize="18" Loaded ="developerCombo_Loaded" SelectionChanged="developerCombo_SelectionChanged"></ComboBox>
+
+            <Image x:Name="layout1_Image" HorizontalAlignment="Left" Height="307" Margin="81,306,0,0" VerticalAlignment="Top" Width="562" Source="layouts/layout1_Image.png"/>
+            <Label x:Name="layout1_Name" Margin="696,306,48,685" FontSize="18" FontWeight="Bold" Content="Name: Layout1"/>
+            <TextBlock x:Name="layout1_Date" Margin="696,352,10,605" FontSize="18" FontWeight="Bold" Text="Date Updated: &#x0a;            3/16/2017"/>
+        </Grid>
+    </ScrollViewer>
 </Window>

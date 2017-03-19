@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Keyboard_Interface"
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Keyboard_Interface.Layout2"
         mc:Ignorable="d"
-        Title="Layout1_L" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Maximized" d:DesignWidth="1965.983" d:DesignHeight="1085.588">
+        Title="Layout2" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" WindowState="Maximized" d:DesignWidth="1965.983" d:DesignHeight="1085.588">
 
     <!-- <Grid Margin="0,0,0,-29">
         <Grid.RowDefinitions>
@@ -18,7 +18,7 @@
             <RowDefinition Height="204" />
         </Grid.RowDefinitions> -->
 
-    <Viewbox>
+    <Viewbox Margin="-424,10,-439,208">
         <Grid>
             <!--BUTTONS/LETTER KEYS _________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________-->
             <Button x:Name="close" Content="CLOSE" HorizontalAlignment="Left" Margin="1742,29,-21,0" VerticalAlignment="Top" Click="close_Click" FontSize="32px" Style="{StaticResource closeButtonTemplate}" Height="164" Width="193" RenderTransformOrigin="0.409,0.451" Background="{x:Null}" />
@@ -66,6 +66,8 @@
             <Button x:Name="clear" Content="CLEAR" HorizontalAlignment="Left" Margin="1433,910,0,0" VerticalAlignment="Top" Click="clear_Click" FontSize="25" Style="{StaticResource bckspcButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="368" Height="150" />
             <Button x:Name="caps" Content="CAPS" HorizontalAlignment="Left" Margin="-70,910,0,0" VerticalAlignment="Top" Click="caps_Click" FontSize="25" Style="{StaticResource sym_capsButtonTemplate}" FontFamily="Arial" FontWeight="Bold" Width="368" Height="150" />
             <Button x:Name="disableAll" Content="" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="29" Height="35" BorderBrush="White" Click="disableALL"/>
+            <Button x:Name="voice" HorizontalAlignment="Left" Margin="32,29,0,0" VerticalAlignment="Top" Click="voice_Click" Style="{StaticResource bckspcButtonTemplate}" Width="1728" Height="164" Opacity="0" />
+
             <!-- Comment -->
         </Grid>
     </Viewbox>

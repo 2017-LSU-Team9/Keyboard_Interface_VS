@@ -24,6 +24,10 @@ namespace Keyboard_Interface
         {
             InitializeComponent();
             apply.IsEnabled = false;
+
+            layout1_Image.Visibility = Visibility.Collapsed;
+            layout1_Name.Visibility = Visibility.Collapsed;
+            layout1_Date.Visibility = Visibility.Collapsed;
         }
 
         //**************************************************************************************************************
@@ -32,20 +36,35 @@ namespace Keyboard_Interface
         //  Description: These events run when the window is loaded and generates the inital values into the dropdowns
         //**************************************************************************************************************
 
+
+        private void themeCombo_Loaded(object sender, RoutedEventArgs e)
+        {
+            themeCombo.SelectedIndex = 1;
+        }
+
+        private void developerCombo_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<string> devComboData = new List<string>();
+
+            devComboData.Add("OFF");
+            devComboData.Add("ON");
+
+            var themeCombo = sender as ComboBox;
+            developerCombo.ItemsSource = devComboData;
+            developerCombo.SelectedIndex = 0;
+        }
+
         private void layoutCombo_Loaded(object sender, RoutedEventArgs e)
         {
             List<string> data = new List<string>();
 
-            data.Add("Layout1 (Zoomed Out)");
-            data.Add("Layout2 (Full Screen)");
+            data.Add("Layout1 (Full Screen)");
+            data.Add("Layout2 (Zoomed Out)");
 
-            var themeCombo = sender as ComboBox;
-            themeCombo.ItemsSource = data;
-            themeCombo.SelectedIndex = 0;
+            var layoutCombo = sender as ComboBox;
+            layoutCombo.ItemsSource = data;
+            layoutCombo.SelectedIndex = 0;
         }
-
-
-
 
 
         //**************************************************************************************************************
@@ -87,15 +106,35 @@ namespace Keyboard_Interface
             if(selection == 0)
             {
                 Properties.Settings.Default.layoutSelect = "layout1" ;
+                layout1_Image.Visibility = Visibility.Visible;
+                layout1_Name.Visibility = Visibility.Visible;
+                layout1_Date.Visibility = Visibility.Visible;
             }
 
             else
             {
                 Properties.Settings.Default.layoutSelect = "layout2";
+                layout1_Image.Visibility = Visibility.Collapsed;
+                layout1_Name.Visibility = Visibility.Collapsed;
+                layout1_Date.Visibility = Visibility.Collapsed;
             }
         }
 
+        private void developerCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            apply.IsEnabled = true;
 
+            int selection = developerCombo.SelectedIndex;
+
+            if (selection == 0)
+            {
+                Properties.Settings.Default.DEVMODE = false;
+            }
+            else
+            {
+                Properties.Settings.Default.DEVMODE = true;
+            }
+        }
 
 
         //**************************************************************************************************************
@@ -105,7 +144,7 @@ namespace Keyboard_Interface
         //               Cancel - Close Window (Don't save); Apply - Don't close window; save changes.
         //**************************************************************************************************************
 
-        
+
         private void cancel_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -115,14 +154,14 @@ namespace Keyboard_Interface
         {
             if (Properties.Settings.Default.layoutSelect == "layout1")
             {
-                Layout1_L keyboard = new Layout1_L("");
-                keyboard.Show();
+                Layout1_L keyboard1 = new Layout1_L("");
+                keyboard1.Show();
                 this.Close();
             }
             else
             {
-                Layout2 keyboard = new Layout2("");
-                keyboard.Show();
+                Layout2 keyboard2 = new Layout2("");
+                keyboard2.Show();
                 this.Close();
             }
         }

@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Resources;
 using System.Windows.Shapes;
+using System.Speech.Synthesis;
 
 namespace Keyboard_Interface
 {
@@ -655,6 +656,13 @@ namespace Keyboard_Interface
                 Properties.Settings.Default.CAPsKey = true;
                 Properties.Settings.Default.CAPs = false;
             }
+        }
+
+        private void voice_Click(object sender, RoutedEventArgs e)
+        {
+            SpeechSynthesizer synth = new SpeechSynthesizer();
+            synth.SetOutputToDefaultAudioDevice();
+            synth.Speak(input.Text);
         }
 
         private void lowerCase()

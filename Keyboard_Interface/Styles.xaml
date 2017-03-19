@@ -137,8 +137,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType ="{x:Type Button}">
                     <Grid>
-                        <Rectangle x:Name ="OuterRing" Width ="215" Height ="215" Fill ="Red" Margin="0,0"/>
-                        <Rectangle x:Name ="InnerRing" Width ="175" Height ="120" Fill ="LightGray" Margin="0,0" />
+                        <Rectangle x:Name ="OuterRing" Width ="300" Height ="215" Fill ="Red" Margin="0,0"/>
+                        <Rectangle x:Name ="InnerRing" Width ="275" Height ="125" Fill ="LightGray" Margin="0,0" />
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                     <ControlTemplate.Triggers>

@@ -94,5 +94,17 @@ namespace Keyboard_Interface.Properties {
                 this["layoutSelect"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool DEVMODE {
+            get {
+                return ((bool)(this["DEVMODE"]));
+            }
+            set {
+                this["DEVMODE"] = value;
+            }
+        }
     }
 }

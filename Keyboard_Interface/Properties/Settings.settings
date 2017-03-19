@@ -20,5 +20,8 @@
     <Setting Name="layoutSelect" Type="System.String" Scope="User">
       <Value Profile="(Default)">layout1</Value>
     </Setting>
+    <Setting Name="DEVMODE" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
