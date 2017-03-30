@@ -56,13 +56,13 @@ namespace Keyboard_Interface
 
         private void mouseCombo_Loaded(object sender, RoutedEventArgs e)
         {
-            List<string> devComboData = new List<string>();
+            List<string> mouseComboData = new List<string>();
 
-            devComboData.Add("OFF");
-            devComboData.Add("ON");
+            mouseComboData.Add("ON");
+            mouseComboData.Add("OFF");
 
             var mouseCombo = sender as ComboBox;
-            mouseCombo.ItemsSource = devComboData;
+            mouseCombo.ItemsSource = mouseComboData;
             mouseCombo.SelectedIndex = 0;
         }
 
@@ -164,11 +164,11 @@ namespace Keyboard_Interface
 
             if (selection == 0)
             {
-                Properties.Settings.Default.mouseOver = false;
+                Properties.Settings.Default.mouseOver = true;
             }
             else
             {
-                Properties.Settings.Default.mouseOver = true;
+                Properties.Settings.Default.mouseOver = false;
             }
         }
 

@@ -1,0 +1,15 @@
+﻿<Window x:Class="Keyboard_Interface.close_confirm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Keyboard_Interface"
+        mc:Ignorable="d"
+        Title="close_confirm" Height="300" Width="900" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#D3D3D3">
+    <Grid>
+        <Button x:Name="yes" Content="YES" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="250" Margin="0,42,0,0" FontSize="22" FontWeight="Bold" Background="DarkGreen" Click="yes_Click"/>
+        <Button x:Name="cancel" Content="CANCEL" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="250" Margin="350,42,0,0" FontSize="22" FontWeight="Bold" Background="DarkRed" Click="cancel_Click"/>
+        <Button x:Name="settings" Content="SETTINGS" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="250" Margin="700,42,0,0" FontSize="22" FontWeight="Bold" Background="LightBlue" Click="settings_Click"/>
+        <Label x:Name="label" Content="Are you sure you want to close the keyboard?" HorizontalAlignment="Left" Margin="222,0,0,0" VerticalAlignment="Top" FontSize="20" Width="450" FontWeight="Bold"/>
+    </Grid>
+</Window>

@@ -45,7 +45,7 @@
             <Label x:Name="layout2_Name" Margin="696,306,48,685" FontSize="18" FontWeight="Bold" Content="Name: Layout2"/>
             <TextBlock x:Name="layout2_Date" Margin="696,352,10,605" FontSize="18" FontWeight="Bold" Text="Date Updated: &#x0a;            3/13/2017"/>
             <Label x:Name="mouseTitle" Margin="81,678,577,389" FontSize="24" FontWeight="Bold" Content="Mouse Over Mode"/>
-            <ComboBox x:Name="mouseCombo" HorizontalAlignment="Left" Margin="480,684,0,0" VerticalAlignment="Top" Width="105" Height="36" RenderTransformOrigin="0.507,0.5" FontSize="18" Loaded ="developerCombo_Loaded" SelectionChanged="mouseCombo_SelectionChanged"/>
+            <ComboBox x:Name="mouseCombo" HorizontalAlignment="Left" Margin="480,684,0,0" VerticalAlignment="Top" Width="105" Height="36" RenderTransformOrigin="0.507,0.5" FontSize="18" Loaded ="mouseCombo_Loaded" SelectionChanged="mouseCombo_SelectionChanged"/>
 
         </Grid>
     </ScrollViewer>

@@ -50,20 +50,8 @@ namespace Keyboard_Interface
 
         private void close_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult close_result = MessageBox.Show("Close Application?", "Close?", MessageBoxButton.YesNoCancel);
-            switch (close_result)
-            {
-                case MessageBoxResult.Yes:
-                    Application.Current.Shutdown();
-                    break;
-                case MessageBoxResult.No:
-                    break;
-                case MessageBoxResult.Cancel:
-                    Settings settings = new Keyboard_Interface.Settings();
-                    settings.Show();
-                    this.Close();
-                    break;
-            }
+            close_confirm closeConfirm = new close_confirm();
+            closeConfirm.Show();
         }
 
         private void a_Click(object sender, RoutedEventArgs e)
