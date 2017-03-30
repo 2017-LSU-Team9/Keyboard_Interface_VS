@@ -28,13 +28,13 @@ namespace Keyboard_Interface
         private double x_POS;
         private double y_POS;
 
-        private int[] mouseOverCount = new int[26];
+        private int[] mouseOverCount = new int[30];
 
         public Layout1_L(string textbox_string)
         {
             InitializeComponent();
 
-            for(int i = 0; i<25; i++)
+            for(int i = 0; i<30; i++)
             {
                 mouseOverCount[i] = 0;
             }
@@ -51,7 +51,7 @@ namespace Keyboard_Interface
         private void close_Click(object sender, RoutedEventArgs e)
         {
             close_confirm closeConfirm = new close_confirm();
-            closeConfirm.Show();
+            closeConfirm.ShowDialog();
         }
 
         private void a_Click(object sender, RoutedEventArgs e)
@@ -999,22 +999,34 @@ namespace Keyboard_Interface
 
         }
 
+        private void bksp_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[26] += 1;
+
+                if (mouseOverCount[26] == 3)
+                {
+                    bksp_Click(sender, e);
+                }
+            }
+        }
+
         private void clear_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult clear_result = MessageBox.Show("Clear Text?", "Clear?", MessageBoxButton.YesNo);
-            switch (clear_result)
+            clear_confirm clearConfirm = new clear_confirm();
+            clearConfirm.ShowDialog();
+            
+            bool clear = clearConfirm.clear;
+            if (clear == true)
             {
-                case MessageBoxResult.Yes:
-                    if (input.Text.Length != 0)
-                    {
-                        input.Text = "";
-                        upperCase();
-                        Properties.Settings.Default.CAPs = true;
-                    }
-                        break;
-                case MessageBoxResult.No:
-                    break;
-            };
+                if (input.Text.Length != 0)
+                {
+                    input.Text = "";
+                    upperCase();
+                    Properties.Settings.Default.CAPs = true;
+                }
+            }
         }
         private void sym_Click(object sender, RoutedEventArgs e)
         {

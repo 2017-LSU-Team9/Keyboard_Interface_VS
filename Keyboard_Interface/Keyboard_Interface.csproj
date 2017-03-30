@@ -109,6 +109,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="clear_confirm.xaml.cs">
+      <DependentUpon>clear_confirm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="close_confirm.xaml.cs">
       <DependentUpon>close_confirm.xaml</DependentUpon>
     </Compile>
@@ -125,6 +128,10 @@
     <Compile Include="Layout1_L.xaml.cs">
       <DependentUpon>Layout1_L.xaml</DependentUpon>
     </Compile>
+    <Page Include="clear_confirm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="close_confirm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
