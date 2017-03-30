@@ -333,7 +333,7 @@ namespace Keyboard_Interface
 
                 if (mouseOverCount[7] == 3)
                 {
-                    a_Click(sender, e);
+                    h_Click(sender, e);
                 }
             }
         }
