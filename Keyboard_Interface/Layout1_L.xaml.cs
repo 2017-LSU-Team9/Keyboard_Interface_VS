@@ -25,10 +25,19 @@ namespace Keyboard_Interface
 
     public partial class Layout1_L : Window
     {
+        private double x_POS;
+        private double y_POS;
+
+        private int[] mouseOverCount = new int[26];
 
         public Layout1_L(string textbox_string)
         {
             InitializeComponent();
+
+            for(int i = 0; i<25; i++)
+            {
+                mouseOverCount[i] = 0;
+            }
 
             StreamResourceInfo sri = Application.GetResourceStream(new Uri("blue_curs1.cur", UriKind.Relative));
             Cursor customCursor = new Cursor(sri.Stream);
@@ -75,6 +84,20 @@ namespace Keyboard_Interface
             {
                 input.AppendText("a");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void a_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[0] += 1;
+
+                if (mouseOverCount[0] == 3)
+                {
+                    a_Click(sender, e);
+                }
+            }
         }
 
         private void b_Click(object sender, RoutedEventArgs e)
@@ -94,6 +117,20 @@ namespace Keyboard_Interface
             else
             {
                 input.AppendText("b");
+            }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void b_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[1] += 1;
+
+                if (mouseOverCount[1] == 3)
+                {
+                    b_Click(sender, e);
+                }
             }
         }
 
@@ -115,6 +152,20 @@ namespace Keyboard_Interface
             {
                 input.AppendText("c");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void c_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[2] += 1;
+
+                if (mouseOverCount[2] == 3)
+                {
+                    c_Click(sender, e);
+                }
+            }
         }
 
         private void d_Click(object sender, RoutedEventArgs e)
@@ -134,6 +185,20 @@ namespace Keyboard_Interface
             else
             {
                 input.AppendText("d");
+            }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void d_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[3] += 1;
+
+                if (mouseOverCount[3] == 3)
+                {
+                    d_Click(sender, e);
+                }
             }
         }
 
@@ -155,6 +220,20 @@ namespace Keyboard_Interface
             {
                 input.AppendText("e");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void e_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[4] += 1;
+
+                if (mouseOverCount[4] == 3)
+                {
+                    e_Click(sender, e);
+                }
+            }
         }
 
         private void f_Click(object sender, RoutedEventArgs e)
@@ -174,6 +253,20 @@ namespace Keyboard_Interface
             else
             {
                 input.AppendText("f");
+            }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void f_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[5] += 1;
+
+                if (mouseOverCount[5] == 3)
+                {
+                    f_Click(sender, e);
+                }
             }
         }
 
@@ -195,6 +288,20 @@ namespace Keyboard_Interface
             {
                 input.AppendText("g");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void g_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[6] += 1;
+
+                if (mouseOverCount[6] == 3)
+                {
+                    g_Click(sender, e);
+                }
+            }
         }
 
         private void h_Click(object sender, RoutedEventArgs e)
@@ -214,6 +321,20 @@ namespace Keyboard_Interface
             else
             {
                 input.AppendText("h");
+            }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void h_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[7] += 1;
+
+                if (mouseOverCount[7] == 3)
+                {
+                    a_Click(sender, e);
+                }
             }
         }
 
@@ -235,6 +356,20 @@ namespace Keyboard_Interface
             {
                 input.AppendText("i");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void i_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[8] += 1;
+
+                if (mouseOverCount[8] == 3)
+                {
+                    i_Click(sender, e);
+                }
+            }
         }
 
         private void j_Click(object sender, RoutedEventArgs e)
@@ -254,6 +389,20 @@ namespace Keyboard_Interface
             else
             {
                 input.AppendText("j");
+            }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void j_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[9] += 1;
+
+                if (mouseOverCount[9] == 3)
+                {
+                    j_Click(sender, e);
+                }
             }
         }
 
@@ -275,6 +424,20 @@ namespace Keyboard_Interface
             {
                 input.AppendText("k");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void k_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[10] += 1;
+
+                if (mouseOverCount[10] == 3)
+                {
+                    k_Click(sender, e);
+                }
+            }
         }
 
         private void l_Click(object sender, RoutedEventArgs e)
@@ -295,7 +458,22 @@ namespace Keyboard_Interface
             {
                 input.AppendText("l");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
         }
+
+        private void l_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[11] += 1;
+
+                if (mouseOverCount[11] == 3)
+                {
+                    l_Click(sender, e);
+                }
+            }
+        }
+
 
         private void m_Click(object sender, RoutedEventArgs e)
         {
@@ -314,6 +492,20 @@ namespace Keyboard_Interface
             else
             {
                 input.AppendText("m");
+            }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void m_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[12] += 1;
+
+                if (mouseOverCount[12] == 3)
+                {
+                    m_Click(sender, e);
+                }
             }
         }
 
@@ -335,6 +527,20 @@ namespace Keyboard_Interface
             {
                 input.AppendText("n");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void n_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[13] += 1;
+
+                if (mouseOverCount[13] == 3)
+                {
+                    n_Click(sender, e);
+                }
+            }
         }
 
         private void o_Click(object sender, RoutedEventArgs e)
@@ -354,6 +560,20 @@ namespace Keyboard_Interface
             else
             {
                 input.AppendText("o");
+            }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void o_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[14] += 1;
+
+                if (mouseOverCount[14] == 3)
+                {
+                    o_Click(sender, e);
+                }
             }
         }
 
@@ -375,6 +595,20 @@ namespace Keyboard_Interface
             {
                 input.AppendText("p");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void p_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[15] += 1;
+
+                if (mouseOverCount[15] == 3)
+                {
+                    p_Click(sender, e);
+                }
+            }
         }
 
         private void q_Click(object sender, RoutedEventArgs e)
@@ -394,6 +628,20 @@ namespace Keyboard_Interface
             else
             {
                 input.AppendText("q");
+            }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void q_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[16] += 1;
+
+                if (mouseOverCount[16] == 3)
+                {
+                    q_Click(sender, e);
+                }
             }
         }
 
@@ -415,6 +663,20 @@ namespace Keyboard_Interface
             {
                 input.AppendText("r");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void r_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[17] += 1;
+
+                if (mouseOverCount[17] == 3)
+                {
+                    r_Click(sender, e);
+                }
+            }
         }
 
         private void s_Click(object sender, RoutedEventArgs e)
@@ -434,6 +696,20 @@ namespace Keyboard_Interface
             else
             {
                 input.AppendText("s");
+            }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void s_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[18] += 1;
+
+                if (mouseOverCount[18] == 3)
+                {
+                    s_Click(sender, e);
+                }
             }
         }
 
@@ -455,6 +731,20 @@ namespace Keyboard_Interface
             {
                 input.AppendText("t");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void t_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[19] += 1;
+
+                if (mouseOverCount[19] == 3)
+                {
+                    t_Click(sender, e);
+                }
+            }
         }
 
         private void u_Click(object sender, RoutedEventArgs e)
@@ -474,6 +764,20 @@ namespace Keyboard_Interface
             else
             {
                 input.AppendText("u");
+            }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void u_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[20] += 1;
+
+                if (mouseOverCount[20] == 3)
+                {
+                    u_Click(sender, e);
+                }
             }
         }
 
@@ -495,6 +799,20 @@ namespace Keyboard_Interface
             {
                 input.AppendText("v");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void v_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[21] += 1;
+
+                if (mouseOverCount[21] == 3)
+                {
+                    v_Click(sender, e);
+                }
+            }
         }
 
         private void w_Click(object sender, RoutedEventArgs e)
@@ -514,6 +832,20 @@ namespace Keyboard_Interface
             else
             {
                 input.AppendText("w");
+            }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void w_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[22] += 1;
+
+                if (mouseOverCount[22] == 3)
+                {
+                    w_Click(sender, e);
+                }
             }
         }
 
@@ -535,6 +867,20 @@ namespace Keyboard_Interface
             {
                 input.AppendText("x");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void x_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[23] += 1;
+
+                if (mouseOverCount[23] == 3)
+                {
+                    x_Click(sender, e);
+                }
+            }
         }
 
         private void y_Click(object sender, RoutedEventArgs e)
@@ -555,6 +901,20 @@ namespace Keyboard_Interface
             {
                 input.AppendText("y");
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void y_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[24] += 1;
+
+                if (mouseOverCount[24] == 3)
+                {
+                    y_Click(sender, e);
+                }
+            }
         }
 
         private void z_Click(object sender, RoutedEventArgs e)
@@ -574,6 +934,20 @@ namespace Keyboard_Interface
             else
             {
                 input.AppendText("z");
+            }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
+
+        private void z_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (Properties.Settings.Default.mouseOver == true)
+            {
+                mouseOverCount[25] += 1;
+
+                if (mouseOverCount[25] == 3)
+                {
+                    z_Click(sender, e);
+                }
             }
         }
 
@@ -617,7 +991,7 @@ namespace Keyboard_Interface
 
         private void bksp_Click(object sender, RoutedEventArgs e)
         {
-            if (Properties.Settings.Default.DEVMODE == true)
+            if (Properties.Settings.Default.DEVMODE == true && input.Text.Length != 0)
             {
                 string str = input.Text;
                 int length = str.Length;
@@ -625,8 +999,15 @@ namespace Keyboard_Interface
                 MistakeModule(input.Text, removedChar);
             }
 
-            if (input.Text.Length != 0)
+            if (input.Text.Length > 1)
                 input.Text = input.Text.Remove(input.Text.Length - 1, 1);
+
+            else if (input.Text.Length == 1)
+            {
+                input.Text = input.Text.Remove(input.Text.Length - 1, 1);
+                Properties.Settings.Default.CAPs = true;
+                upperCase();
+            }
 
         }
 
@@ -637,8 +1018,12 @@ namespace Keyboard_Interface
             {
                 case MessageBoxResult.Yes:
                     if (input.Text.Length != 0)
+                    {
                         input.Text = "";
-                    break;
+                        upperCase();
+                        Properties.Settings.Default.CAPs = true;
+                    }
+                        break;
                 case MessageBoxResult.No:
                     break;
             };
@@ -826,14 +1211,13 @@ namespace Keyboard_Interface
 
         private void InputtoFile(string str)
         {
-            String filename = "D:\\FileOutPutTest\\test.txt";
-            FileStream fs = new FileStream(filename, FileMode.Append, FileAccess.Write);
-            StreamWriter objWrite = new StreamWriter(fs);
-            objWrite.Write("\r\n \r\n");
-            objWrite.Write(str);
-            objWrite.Close();
-            
+                String filename = "C:\\Keyboard_Interface_Test_Data\\mistakes.txt";
+                FileStream fs = new FileStream(filename, FileMode.Append, FileAccess.Write);
+                StreamWriter objWrite = new StreamWriter(fs);
+                objWrite.Write(str);
+                objWrite.Close();
         }
+
         private void MistakeModule(string currentText, char removedChar)
         {
             String output;
@@ -844,5 +1228,30 @@ namespace Keyboard_Interface
             output = dt + spacing + currentText + spacing + removedChar + "\r\n";
             InputtoFile(output);
         }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Properties.Settings.Default.DEVMODE == true)
+            {
+                Point p = e.GetPosition(this);
+
+                x_POS = p.X;
+                y_POS = p.Y;
+
+                String x_POS1 = x_POS.ToString();
+                String y_POS1 = y_POS.ToString();
+
+                String filename = "C:\\Keyboard_Interface_Test_Data\\coords.txt";
+                FileStream fs = new FileStream(filename, FileMode.Append, FileAccess.Write);
+                StreamWriter objWrite = new StreamWriter(fs);
+
+                objWrite.Write(x_POS1);
+                objWrite.Write("               ");
+                objWrite.Write(y_POS1 + "\r\n");
+                objWrite.Close();
+            }
+        }
+
+
     }
 }

@@ -25,9 +25,9 @@ namespace Keyboard_Interface
             InitializeComponent();
             apply.IsEnabled = false;
 
-            layout1_Image.Visibility = Visibility.Collapsed;
-            layout1_Name.Visibility = Visibility.Collapsed;
-            layout1_Date.Visibility = Visibility.Collapsed;
+            layout2_Image.Visibility = Visibility.Collapsed;
+            layout2_Name.Visibility = Visibility.Collapsed;
+            layout2_Date.Visibility = Visibility.Collapsed;
         }
 
         //**************************************************************************************************************
@@ -49,9 +49,21 @@ namespace Keyboard_Interface
             devComboData.Add("OFF");
             devComboData.Add("ON");
 
-            var themeCombo = sender as ComboBox;
+            var developerCombo = sender as ComboBox;
             developerCombo.ItemsSource = devComboData;
             developerCombo.SelectedIndex = 0;
+        }
+
+        private void mouseCombo_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<string> devComboData = new List<string>();
+
+            devComboData.Add("OFF");
+            devComboData.Add("ON");
+
+            var mouseCombo = sender as ComboBox;
+            mouseCombo.ItemsSource = devComboData;
+            mouseCombo.SelectedIndex = 0;
         }
 
         private void layoutCombo_Loaded(object sender, RoutedEventArgs e)
@@ -109,6 +121,10 @@ namespace Keyboard_Interface
                 layout1_Image.Visibility = Visibility.Visible;
                 layout1_Name.Visibility = Visibility.Visible;
                 layout1_Date.Visibility = Visibility.Visible;
+
+                layout2_Image.Visibility = Visibility.Collapsed;
+                layout2_Name.Visibility = Visibility.Collapsed;
+                layout2_Date.Visibility = Visibility.Collapsed;
             }
 
             else
@@ -117,6 +133,10 @@ namespace Keyboard_Interface
                 layout1_Image.Visibility = Visibility.Collapsed;
                 layout1_Name.Visibility = Visibility.Collapsed;
                 layout1_Date.Visibility = Visibility.Collapsed;
+
+                layout2_Image.Visibility = Visibility.Visible;
+                layout2_Name.Visibility = Visibility.Visible;
+                layout2_Date.Visibility = Visibility.Visible;
             }
         }
 
@@ -136,6 +156,21 @@ namespace Keyboard_Interface
             }
         }
 
+        private void mouseCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            apply.IsEnabled = true;
+
+            int selection = mouseCombo.SelectedIndex;
+
+            if (selection == 0)
+            {
+                Properties.Settings.Default.mouseOver = false;
+            }
+            else
+            {
+                Properties.Settings.Default.mouseOver = true;
+            }
+        }
 
         //**************************************************************************************************************
         //                                  Three Bottom Buttons

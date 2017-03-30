@@ -106,5 +106,17 @@ namespace Keyboard_Interface.Properties {
                 this["DEVMODE"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool mouseOver {
+            get {
+                return ((bool)(this["mouseOver"]));
+            }
+            set {
+                this["mouseOver"] = value;
+            }
+        }
     }
 }

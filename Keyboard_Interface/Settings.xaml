@@ -10,7 +10,7 @@
     <ScrollViewer>
         <Grid>
 
-            <ComboBox x:Name="themeCombo" HorizontalAlignment="Left" Margin="480,143,0,0" VerticalAlignment="Top" Width="105" Height="36" RenderTransformOrigin="0.507,0.5" 
+            <ComboBox x:Name="themeCombo" HorizontalAlignment="Left" Margin="480,169,0,0" VerticalAlignment="Top" Width="105" Height="36" RenderTransformOrigin="0.507,0.5" 
                   FontSize="18" Loaded="themeCombo_Loaded" SelectionChanged="themeCombo_SelectionChanged">
                 <ComboBoxItem>
                     <StackPanel Orientation="Horizontal">
@@ -26,19 +26,27 @@
                 </ComboBoxItem>
             </ComboBox>
 
-            <Label x:Name="themeTitle" Margin="81,136,636,831" FontSize="24" FontWeight="Bold" Content="Theme Style"/>
+            <Label x:Name="themeTitle" Margin="81,169,636,798" FontSize="24" FontWeight="Bold" Content="Theme Style"/>
             <Button x:Name="ok" Content="OK" HorizontalAlignment="Left" Margin="394,774,0,0" VerticalAlignment="Top" Width="120" Height="71" Click="ok_Click" RenderTransformOrigin="0.5,0.563"/>
             <Button x:Name="cancel" Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="555,774,0,0" Width="120" Height="71" Click="cancel_Click"/>
             <Button x:Name="apply" Content="Apply" HorizontalAlignment="Left" Margin="735,774,0,0" VerticalAlignment="Top" Width="120" Height="71" Click="apply_Click"/>
-            <Label x:Name="layoutTitle" Margin="81,218,659,739" FontSize="24" FontWeight="Bold" Content="Key Layout"/>
-            <ComboBox x:Name="layoutCombo" HorizontalAlignment="Left" Margin="480,227,0,0" VerticalAlignment="Top" Width="195" Height="36" RenderTransformOrigin="0.507,0.5" FontSize="18" Loaded ="layoutCombo_Loaded" SelectionChanged="layoutCombo_SelectionChanged"></ComboBox>
+            <Label x:Name="layoutTitle" Margin="81,236,659,721" FontSize="24" FontWeight="Bold" Content="Key Layout"/>
+            <ComboBox x:Name="layoutCombo" HorizontalAlignment="Left" Margin="480,242,0,0" VerticalAlignment="Top" Width="195" Height="36" RenderTransformOrigin="0.507,0.5" FontSize="18" Loaded ="layoutCombo_Loaded" SelectionChanged="layoutCombo_SelectionChanged"></ComboBox>
             <Image x:Name="eeLogo" HorizontalAlignment="Left" Height="137" Margin="735,10,0,0" VerticalAlignment="Top" Width="158" Source="logos/LSUee.png"/>
-            <Label x:Name="developerTitle" Margin="81,660,604,407" FontSize="24" FontWeight="Bold" Content="Developer Mode"/>
-            <ComboBox x:Name="developerCombo" HorizontalAlignment="Left" Margin="480,660,0,0" VerticalAlignment="Top" Width="65" Height="36" RenderTransformOrigin="0.507,0.5" FontSize="18" Loaded ="developerCombo_Loaded" SelectionChanged="developerCombo_SelectionChanged"></ComboBox>
+            <Image x:Name="julianLogo" HorizontalAlignment="Left" Height="97" Margin="10,10,0,0" VerticalAlignment="Top" Width="158" Source="logos/icon.png"/>
+            <Label x:Name="developerTitle" Margin="81,613,604,454" FontSize="24" FontWeight="Bold" Content="Developer Mode"/>
+            <ComboBox x:Name="developerCombo" HorizontalAlignment="Left" Margin="480,613,0,0" VerticalAlignment="Top" Width="105" Height="36" RenderTransformOrigin="0.507,0.5" FontSize="18" Loaded ="developerCombo_Loaded" SelectionChanged="developerCombo_SelectionChanged"></ComboBox>
 
             <Image x:Name="layout1_Image" HorizontalAlignment="Left" Height="307" Margin="81,306,0,0" VerticalAlignment="Top" Width="562" Source="layouts/layout1_Image.png"/>
             <Label x:Name="layout1_Name" Margin="696,306,48,685" FontSize="18" FontWeight="Bold" Content="Name: Layout1"/>
             <TextBlock x:Name="layout1_Date" Margin="696,352,10,605" FontSize="18" FontWeight="Bold" Text="Date Updated: &#x0a;            3/16/2017"/>
+
+            <Image x:Name="layout2_Image" HorizontalAlignment="Left" Height="307" Margin="81,306,0,0" VerticalAlignment="Top" Width="562" Source="layouts/layout2_Image.png"/>
+            <Label x:Name="layout2_Name" Margin="696,306,48,685" FontSize="18" FontWeight="Bold" Content="Name: Layout2"/>
+            <TextBlock x:Name="layout2_Date" Margin="696,352,10,605" FontSize="18" FontWeight="Bold" Text="Date Updated: &#x0a;            3/13/2017"/>
+            <Label x:Name="mouseTitle" Margin="81,678,577,389" FontSize="24" FontWeight="Bold" Content="Mouse Over Mode"/>
+            <ComboBox x:Name="mouseCombo" HorizontalAlignment="Left" Margin="480,684,0,0" VerticalAlignment="Top" Width="105" Height="36" RenderTransformOrigin="0.507,0.5" FontSize="18" Loaded ="developerCombo_Loaded" SelectionChanged="mouseCombo_SelectionChanged"/>
+
         </Grid>
     </ScrollViewer>
 </Window>

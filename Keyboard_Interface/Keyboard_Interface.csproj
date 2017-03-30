@@ -83,6 +83,9 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -207,6 +210,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="layouts\layout1_Image.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logos\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="layouts\layout2_Image.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logos\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sounds\beep source.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sounds\beep.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
