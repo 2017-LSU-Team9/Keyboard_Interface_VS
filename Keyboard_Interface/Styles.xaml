@@ -3,11 +3,11 @@
                     xmlns:local="clr-namespace:Keyboard_Interface">
 
     <Style x:Key ="roundButtonTemplate" TargetType ="{x:Type Button}">
-       <!-- <Style.Triggers>
+        <Style.Triggers>
             <EventTrigger RoutedEvent="PreviewMouseDown">
                 <SoundPlayerAction Source="/sounds/beep.wav"></SoundPlayerAction>
             </EventTrigger>
-        </Style.Triggers> -->
+        </Style.Triggers>
         <Setter Property ="Foreground" Value ="Black"/>
         <Setter Property ="FontWeight" Value ="Bold"/>
         <Setter Property ="Template">
@@ -33,11 +33,11 @@
     </Style>
 
     <Style x:Key ="closeButtonTemplate" TargetType ="{x:Type Button}">
-        <!-- <Style.Triggers>
+        <Style.Triggers>
             <EventTrigger RoutedEvent="PreviewMouseDown">
                 <SoundPlayerAction Source="/sounds/beep.wav"></SoundPlayerAction>
             </EventTrigger>
-        </Style.Triggers> -->
+        </Style.Triggers>
         <Setter Property ="Foreground" Value ="Black"/>
         <Setter Property ="FontWeight" Value ="Bold"/>
         <Setter Property ="Template">
@@ -63,11 +63,11 @@
     </Style>
 
     <Style x:Key ="spaceButtonTemplate" TargetType ="{x:Type Button}">
-        <!-- <Style.Triggers>
+        <Style.Triggers>
             <EventTrigger RoutedEvent="PreviewMouseDown">
                 <SoundPlayerAction Source="/sounds/beep.wav"></SoundPlayerAction>
             </EventTrigger>
-        </Style.Triggers> -->
+        </Style.Triggers>
         <Setter Property ="Foreground" Value ="Black"/>
         <Setter Property ="FontWeight" Value ="Bold"/>
         <Setter Property ="Template">
@@ -93,11 +93,11 @@
     </Style>
 
     <Style x:Key ="sym_capsButtonTemplate" TargetType ="{x:Type Button}">
-        <!-- <Style.Triggers>
+        <Style.Triggers>
             <EventTrigger RoutedEvent="PreviewMouseDown">
                 <SoundPlayerAction Source="/sounds/beep.wav"></SoundPlayerAction>
             </EventTrigger>
-        </Style.Triggers> -->
+        </Style.Triggers>
         <Setter Property ="Foreground" Value ="Black"/>
         <Setter Property ="FontWeight" Value ="Bold"/>
         <Setter Property ="Template">
@@ -124,11 +124,11 @@
 
     
     <Style x:Key ="sym_capsButtonTemplate_ON" TargetType ="{x:Type Button}">
-        <!-- <Style.Triggers>
+        <Style.Triggers>
             <EventTrigger RoutedEvent="PreviewMouseDown">
                 <SoundPlayerAction Source="/sounds/beep.wav"></SoundPlayerAction>
             </EventTrigger>
-        </Style.Triggers> -->
+        </Style.Triggers>
         <Setter Property ="Foreground" Value ="Black"/>
         <Setter Property ="FontWeight" Value ="Bold"/>
         <Setter Property ="Template">
@@ -156,11 +156,11 @@
 
 
     <Style x:Key ="bckspcButtonTemplate" TargetType ="{x:Type Button}">
-        <!-- <Style.Triggers>
+        <Style.Triggers>
             <EventTrigger RoutedEvent="PreviewMouseDown">
                 <SoundPlayerAction Source="/sounds/beep.wav"></SoundPlayerAction>
             </EventTrigger>
-        </Style.Triggers> -->
+        </Style.Triggers>
         <Setter Property ="Foreground" Value ="Black"/>
         <Setter Property ="FontWeight" Value ="Bold"/>
         <Setter Property ="Template">
