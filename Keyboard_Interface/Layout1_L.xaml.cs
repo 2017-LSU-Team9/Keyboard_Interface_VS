@@ -996,6 +996,7 @@ namespace Keyboard_Interface
                 Properties.Settings.Default.CAPs = true;
                 upperCase();
             }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
 
         }
 
