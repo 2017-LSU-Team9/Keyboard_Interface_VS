@@ -1253,6 +1253,25 @@ namespace Keyboard_Interface
             }
         }
 
+        private void b_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (Properties.Settings.Default.CAPs == true && Properties.Settings.Default.CAPsKey == false)
+            {
+                input.AppendText("B");
+                lowerCase();
+                Properties.Settings.Default.CAPs = false;
+            }
 
+            else if (Properties.Settings.Default.CAPs == true && Properties.Settings.Default.CAPsKey == true)
+            {
+                input.AppendText("B");
+            }
+
+            else
+            {
+                input.AppendText("b");
+            }
+            Array.Clear(mouseOverCount, 0, mouseOverCount.Length);
+        }
     }
 }
